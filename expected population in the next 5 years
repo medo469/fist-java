@@ -1,0 +1,13 @@
+public class lap3 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+			System.out.println("The U.S. Census Bureau projects population based on the expected population so we expect it for the next years and it lokks like:");
+		int population=312032486,year=31536000,birth=year/7,death=year/13,immigrant=year/45;
+	for(int i=1;i<6;i++)	{
+		population=population+birth+immigrant-death;
+		System.out.println("Year "+i+" population : "+population);
+	}
+	}
+	}
