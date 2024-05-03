@@ -1,0 +1,11 @@
+		int x=10,y=11;
+		boolean z;
+		z=(x>y);
+System.out.println(z);
+		z=(x==y);
+System.out.println(z);
+		z=(x<y);
+System.out.println(z);
+		z=(x==y--);
+System.out.println(z);
+		z=(y==x);System.out.print(z);
