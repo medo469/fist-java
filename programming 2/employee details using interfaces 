@@ -1,0 +1,86 @@
+// Employee interface
+interface Employee {
+    void calculateSalary();
+    void displayDetails();
+}
+
+// FullTimeEmployee class
+class FullTimeEmployee implements Employee {
+    private int id;
+    private String name;
+    private double monthlySalary;
+
+    public FullTimeEmployee(int id, String name, double monthlySalary) {
+        this.id = id;
+        this.name = name;
+        this.monthlySalary = monthlySalary;
+    }
+
+    @Override
+    public void calculateSalary() {
+        // For full-time employee, salary is fixed monthly
+        System.out.println("Salary: " + monthlySalary);
+    }
+
+    @Override
+    public void displayDetails() {
+        System.out.println("ID: " + id);
+        System.out.println("Name: " + name);
+        calculateSalary();
+    }
+}
+
+// PartTimeEmployee class
+class PartTimeEmployee implements Employee {
+    private int id;
+    private String name;
+    private double hourlyRate;
+    private int hoursWorked;
+
+    public PartTimeEmployee(int id, String name, double hourlyRate, int hoursWorked) {
+        this.id = id;
+        this.name = name;
+        this.hourlyRate = hourlyRate;
+        this.hoursWorked = hoursWorked;
+    }
+
+    @Override
+    public void calculateSalary() {
+        // For part-time employee, salary is calculated based on hourly rate and hours worked
+        double salary = hourlyRate * hoursWorked;
+        System.out.println("Salary: " + salary);
+    }
+
+    @Override
+    public void displayDetails() {
+        System.out.println("ID: " + id);
+        System.out.println("Name: " + name);
+        calculateSalary();
+    }
+}
+
+// ContractEmployee class
+class ContractEmployee implements Employee {
+    private int id;
+    private String name;
+    private double totalSalary;
+
+    public ContractEmployee(int id, String name, double totalSalary) {
+        this.id = id;
+        this.name = name;
+        this.totalSalary = totalSalary;
+    }
+
+    @Override
+    public void calculateSalary() {
+        // For contract employee, salary is fixed for the contract duration
+        System.out.println("Salary: " + totalSalary);
+    }
+
+    @Override
+    public void displayDetails() {
+        System.out.println("ID: " + id);
+        System.out.println("Name: " + name);
+        calculateSalary();
+    }
+}
